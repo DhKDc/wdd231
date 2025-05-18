@@ -76,16 +76,6 @@ main h2.section-title {
 }
 
 
-main>h2:first-of-type {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #333;
-    text-align: left;
-    padding: 20px 15px 10px 15px;
-    margin: 0;
-}
-
-
 
 #work {
     background-color: #ffffff;
@@ -104,10 +94,11 @@ main>h2:first-of-type {
 }
 
 
-#city {
+section{
     background-color: #ffffff;
     padding-bottom: 15px;
     text-align: center;
+    align-content: center;
     margin-bottom: 10px;
 }
 
