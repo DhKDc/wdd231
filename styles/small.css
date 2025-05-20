@@ -1,177 +1,274 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: #333;
+/* Estilos base y para pantallas pequeñas (Mobile First) */
+:root {
+    --primary-bg-color: #111827; /* Gris oscuro 900 */
+    --primary-text-color: #f3f4f6; /* Gris claro 100 */
+    --secondary-bg-color: #f9fafb; /* Gris muy claro 50 / o blanco */
+    --secondary-text-color: #1f2937; /* Gris oscuro 800 */
+    --accent-color: #FACC15; /* Amarillo 400 */
+    --card-bg-color: #ffffff;
+    --font-family-base: 'Inter', sans-serif;
+    --border-radius-base: 0.5rem; /* 8px */
+    --box-shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
+body {
+    font-family: var(--font-family-base);
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
 
-header {
-    background-color: #2c3e50;
-    color: #ffffff;
-    padding: 10px 15px;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+/* Encabezado */
+.site-header {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    padding: 1rem 0;
+    box-shadow: var(--box-shadow-base);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que el nav se mueva debajo en móvil */
+}
+
+.profile-info {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
-header img {
-    width: 50px;
-    height: 50px;
+.profile-image {
+    width: 48px; /* Más pequeño para móvil */
+    height: 48px;
     border-radius: 50%;
-    border: 2px solid #ffffff;
-    margin-right: 15px;
+    border: 2px solid var(--accent-color);
+    margin-right: 0.75rem; /* 12px */
 }
 
-header h1 {
-    font-size: 1.4em;
+.profile-info h1 {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 700;
     margin: 0;
-    flex-grow: 1;
 }
 
-
-#menu-button {
-    font-size: 1.8em;
-    color: #ffffff;
+.hamburger-button {
     background: none;
     border: none;
+    color: var(--primary-text-color);
     cursor: pointer;
+    padding: 0.5rem;
+    display: block; /* Se mostrará por defecto, larger.css lo ocultará */
 }
 
+.hamburger-button .icon {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
 
-header nav ul {
-    display: none;
+.hamburger-button .icon-close {
+    display: none; /* Oculto por defecto */
+}
+
+.main-nav {
+    width: 100%; /* Ocupa todo el ancho en móvil */
+    display: none; /* Oculto por defecto, JS lo mostrará */
+    background-color: var(--primary-bg-color); /* Mismo fondo que el header */
+}
+
+.main-nav.open {
+    display: block; /* JS cambia esto para mostrar el menú */
+    margin-top: 1rem; /* Espacio entre header y menú desplegado */
+}
+
+.main-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-
-}
-
-header nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    display: block;
-    padding: 10px 15px;
-}
-
-header nav ul li a:hover {
-    background-color: #2c3e50;
-}
-
-
-
-main {
-    padding: 0;
-}
-
-
-main h2.section-title {
-    background-color: #2c3e50;
-    color: #ffffff;
-    padding: 12px 15px;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 1.2em;
-}
-
-
-
-#work {
-    background-color: #ffffff;
-    padding-bottom: 15px;
-    margin-bottom: 10px;
-}
-
-#work ul {
-    list-style: disc;
-    padding-left: 35px;
-    margin-top: 10px;
-}
-
-#work ul li {
-    margin-bottom: 5px;
-}
-
-
-section{
-    background-color: #ffffff;
-    padding-bottom: 15px;
-    text-align: center;
-    align-content: center;
-    margin-bottom: 10px;
-}
-
-#city img {
-    max-width: 90%;
-    height: auto;
-    border: 1px solid #ddd;
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-
-#city p {
-    font-size: 0.9em;
-    color: #555;
-    margin-top: 0;
-}
-
-
-#courses {
-    background-color: #ffffff;
-    padding-bottom: 20px;
-    margin-bottom: 10px;
-}
-
-#courses nav ul {
-    list-style: none;
-    padding: 0 15px;
-    margin: 10px 0 0 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: column; /* Vertical en móvil */
+    align-items: center;
 }
 
-#courses nav ul li {
-    flex-basis: calc(33.333% - 10px);
+.main-nav li {
+    width: 100%;
+    text-align: center;
 }
 
-#courses nav ul li a {
+.main-nav .nav-item {
     display: block;
-    padding: 12px 5px;
-    text-align: center;
+    padding: 0.75rem 1rem; /* 12px 16px */
+    color: var(--primary-text-color);
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 0.9em;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #374151; /* Gris 700 para separador */
+    transition: background-color 0.3s;
+}
+.main-nav li:last-child .nav-item {
+    border-bottom: none;
 }
 
-
-#courses nav a[href="All"] {
-    background-color: #343a40;
-    color: #ffffff;
+.main-nav .nav-item:hover,
+.main-nav .nav-item.active-link {
+    background-color: #374151; /* Gris 700 */
+    color: var(--accent-color);
 }
 
-#courses nav a[href="CSE"] {
-    background-color: #343a40;
-    color: #ffffff;
+/* Contenido Principal */
+main.container {
+    padding-top: 1.5rem; /* 24px */
+    padding-bottom: 1.5rem;
 }
 
-#courses nav a[href="WDD"] {
-    background-color: #343a40;
-    color: #ffffff;
+.home-section h2, .certificate-section h3 {
+    font-size: 1.75rem; /* 28px */
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-text-color);
 }
-
-footer {
-    background-color: #2c3e50;
-    color: #e0e0e0;
-    padding: 20px 15px;
+.certificate-section h3 {
     text-align: center;
-    font-size: 0.9em;
 }
 
+.card {
+    background-color: var(--card-bg-color);
+    padding: 1.5rem; /* 24px */
+    border-radius: var(--border-radius-base);
+    box-shadow: var(--box-shadow-base);
+    margin-bottom: 1.5rem;
+}
+
+.course-work-card ul {
+    list-style: disc;
+    padding-left: 1.5rem; /* 24px */
+    margin: 0;
+}
+
+.course-work-card li {
+    margin-bottom: 0.5rem; /* 8px */
+    color: #4b5563; /* Gris 600 */
+}
+
+.location-image {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: calc(var(--border-radius-base) - 4px); /* Un poco menos que la tarjeta */
+    margin-bottom: 0.5rem;
+}
+
+.caption {
+    text-align: center;
+    font-size: 0.875rem; /* 14px */
+    color: #6b7280; /* Gris 500 */
+    font-style: italic;
+}
+
+/* Sección de Certificados */
+.filter-buttons {
+    display: flex;
+    flex-direction: column; /* Apilados en móvil */
+    gap: 0.75rem; /* 12px */
+    margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+    background-color: var(--secondary-text-color); /* Gris oscuro 800 */
+    color: var(--primary-text-color); /* Blanco/Gris claro */
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius-base);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%; /* Botones ocupan todo el ancho en móvil */
+}
+
+.filter-btn:hover {
+    background-color: #374151; /* Gris 700 */
+}
+
+.filter-btn.active-filter {
+    background-color: var(--accent-color);
+    color: var(--secondary-text-color); /* Texto oscuro sobre fondo amarillo */
+    font-weight: 600;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna en móvil */
+    gap: 1rem; /* 16px */
+}
+
+.course-card {
+    padding: 1rem;
+    border-radius: var(--border-radius-base);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-align: center;
+    cursor: default; /* O pointer si se añade más interacción */
+    transition: transform 0.2s ease-in-out;
+}
+.course-card:hover {
+    transform: translateY(-3px);
+}
+
+.course-card h4 {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+}
+
+.course-card p {
+    font-size: 0.875rem; /* 14px */
+    margin-bottom: 0.125rem;
+}
+.course-card .course-credits {
+    font-size: 0.75rem; /* 12px */
+    color: #4b5563; /* Gris 600 */
+}
+
+/* Estilos para cursos completados y no completados */
+.course-card.not-completed {
+    background-color: #e5e7eb; /* Gris 200 */
+    color: var(--secondary-text-color);
+}
+
+.course-card.completed {
+    background-color: var(--accent-color); /* Amarillo */
+    color: var(--secondary-text-color); /* Texto oscuro, o blanco si el amarillo es muy claro */
+}
+.course-card.completed h4, .course-card.completed p {
+    color: var(--secondary-text-color); /* O #FEFCE8 (yellow-50) para texto claro sobre amarillo oscuro */
+}
+
+
+/* Pie de página */
+.site-footer {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.875rem;
+}
+
+.site-footer p {
+    margin: 0.25rem 0;
+}
 footer p {
     margin: 5px 0;
 }
