@@ -1,68 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <meta name="description" content="WDD 231 Home Page for Daniel Toledo">
-    <meta name="author" content="Daniel Toledo">
+    <title>Daniel Toledo Fuentes - Portafolio</title>
+    <meta name="description" content="Portafolio personal de Daniel Toledo Fuentes, mostrando proyectos y certificaciones en programación web y computación.">
+    <meta name="author" content="Daniel Toledo Fuentes">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <script src="scripts/getdates.js" defer></script>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:url" content="en_US">
-    <meta property="og:image" content="">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="styles/larger.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-    <div class="header-top-content"> <img src="images/danieltoledo.png" alt="Daniel Toledo"> <h1>Daniel Toledo Fuentes</h1>
-    </div>
-    <button id="menu-button">☰</button> <nav>
-        <ul>
-            <li class="active"><a href="#home">Home</a></li> <li><a href="#chamber">Chamber</a></li>
-            <li><a href="#Final">Final</a></li>
-            <li><a href="#github">Github Profile</a></li>
-            <li><a href="#linkedin">LinkedIn</a></li>
-        </ul>
-    </nav>
-</header>
-    <main>
-        <h1>Home</h1>
-        <div class="content-columns">
-            <section id="work">
-                <h2>Course Work</h2>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="profile-info">
+                <img src="images/danieltoledo.png" alt="Foto de Daniel Toledo Fuentes" id="profileImage" class="profile-image">
+                <h1>Daniel Toledo Fuentes</h1>
+            </div>
+            <button id="hamburgerButton" class="hamburger-button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mainNav">
+                <svg id="menuIcon" class="icon icon-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16m-4 6h4"></path></svg>
+                <svg id="closeIcon" class="icon icon-close" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <nav id="mainNav" class="main-nav">
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </section>
-            <section id="city">
-                <h2>Rancagua, Chile</h2>
-            <img src="images/rancagua.jpg" alt="Plaza de los Heroes, Rancagua" width="300" height="200">
-            <p>"Plaza de los Heroes" in Rancagua</p>
-        </section>
-        </div>
-        <section id="courses">
-            <nav>
-                <h2>Web and Computer Programming Certificate</h2>
-                <ul>
-                    <li><a href="All">All</a></li>
-                    <li><a href="CSE">CSE</a></li>
-                    <li><a href="WDD">WDD</a></li>
+                    <li><a href="#" class="nav-item active-link">Home</a></li>
+                    <li><a href="#" class="nav-item">Chamber</a></li>
+                    <li><a href="#" class="nav-item">Final</a></li>
+                    <li><a href="#" class="nav-item">Github Profile</a></li>
+                    <li><a href="#" class="nav-item">LinkedIn</a></li>
                 </ul>
             </nav>
+        </div>
+    </header>
 
+    <main class="container">
+        <section class="home-section">
+            <h2>Home</h2>
+            <div class="content-grid">
+                <article class="card course-work-card">
+                    <h3>Course Work</h3>
+                    <ul>
+                        <li>Elemento de curso 1</li>
+                        <li>Elemento de curso 2</li>
+                        <li>Elemento de curso 3</li>
+                        <li>Más trabajos del curso...</li>
+                    </ul>
+                </article>
+                <article class="card location-card">
+                    <h3>Rancagua, Chile</h3>
+                    <img src="images/rancagua.jpg" alt="Plaza de los Héroes en Rancagua" id="locationImage" class="location-image">
+                    <p class="caption">"Plaza de los Héroes" en Rancagua</p>
+                </article>
+            </div>
         </section>
 
+        <section class="certificate-section card">
+            <h3>Web and Computer Programming Certificate</h3>
+            <div id="filterButtonsContainer" class="filter-buttons">
+                <button data-filter="ALL" class="filter-btn active-filter">All</button>
+                <button data-filter="CSE" class="filter-btn">CSE</button>
+                <button data-filter="WDD" class="filter-btn">WDD</button>
+            </div>
+            <div id="coursesContainer" class="courses-grid">
+                </div>
+        </section>
     </main>
-    <footer>
-        <p>&copy; <span id="currentyear"></span> Daniel Toledo, Chile</p>
-        <p id="lastModified"></p>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Daniel Toledo, Chile</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
     </footer>
+
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
