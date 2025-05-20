@@ -127,13 +127,9 @@ body {
     color: var(--accent-color);
 }
 
-/* Contenido Principal */
-main.container {
-    padding-top: 1.5rem; /* 24px */
-    padding-bottom: 1.5rem;
-}
-
-.home-section h2, .certificate-section h3 {
+/* Estilos para los títulos principales de las secciones dentro de main */
+.page-title-section h2, 
+.certificate-section h3 { /* El h3 de .certificate-section sigue igual */
     font-size: 1.75rem; /* 28px */
     font-weight: 600;
     margin-bottom: 1.5rem;
