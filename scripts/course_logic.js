@@ -44,12 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const fullDescription = `${course.description}\n\nTecnologías: ${course.technology.join(', ')}`;
             courseCard.setAttribute('title', fullDescription);
 
-            courseCard.innerHTML = `
-                <h4>${course.subject} ${course.number}</h4>
-                <p>${course.title}</p>
-                <p class="course-credits">Créditos: ${course.credits}</p>
-            `;
+            courseCard.innerHTML = `<h4>${course.subject} ${course.number}</h4>`;
+
             coursesContainer.appendChild(courseCard);
+            `;
         });
     }
 
