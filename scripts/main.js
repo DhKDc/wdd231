@@ -37,35 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // --- DATOS DE CURSOS ---
-    const courses = [
-        {
-            subject: 'CSE', number: 110, title: 'Introduction to Programming', credits: 2,
-            description: 'This course will introduce students to programming...', technology: ['Python'], completed: true
-        },
-        {
-            subject: 'WDD', number: 130, title: 'Web Fundamentals', credits: 2,
-            description: 'This course introduces students to the World Wide Web...', technology: ['HTML', 'CSS'], completed: true
-        },
-        {
-            subject: 'CSE', number: 111, title: 'Programming with Functions', credits: 2,
-            description: 'CSE 111 students become more organized...', technology: ['Python'], completed: false
-        },
-        {
-            subject: 'CSE', number: 210, title: 'Programming with Classes', credits: 2,
-            description: 'This course will introduce the notion of classes...', technology: ['C#'], completed: false
-        },
-        {
-            subject: 'WDD', number: 131, title: 'Dynamic Web Fundamentals', credits: 2,
-            description: 'This course builds on prior experience in Web Fundamentals...', technology: ['HTML', 'CSS', 'JavaScript'], completed: true
-        },
-        {
-            subject: 'WDD', number: 231, title: 'Frontend Web Development I', credits: 2,
-            description: 'This course builds on prior experience with Dynamic Web...', technology: ['HTML', 'CSS', 'JavaScript'], completed: false
-        }
-    ]; // Descripciones acortadas para brevedad
-
     // --- LÓGICA PARA MOSTRAR Y FILTRAR CURSOS ---
     const coursesContainer = document.getElementById('coursesContainer');
     const filterButtons = document.querySelectorAll('#filterButtonsContainer .filter-btn');
