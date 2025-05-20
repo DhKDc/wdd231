@@ -1,160 +1,97 @@
-@media (min-width: 768px) {
-    body {
-        background-color: #e9e9e9;
+/* Estilos para pantallas medianas y grandes (min-width: 768px) */
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 1.5rem 0;
     }
-    header {
-        background-color: #274e6c;
-        margin: 0 auto;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .header-top-content {
-        background-color: #274e6c;
-        padding: 15px 20px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        width: auto;
-    }
-    header img {
+
+    /* Encabezado */
+    .profile-image {
         width: 80px;
         height: 80px;
-        border-radius: 50%;
-    }
-    header h1 {
-        font-size: 1.9em;
-        color: #ffffff;
-        font-weight: bold;
-        margin: 0;
-    }
-    #menu-button {
-        display: none;
+        margin-right: 1rem; /* 16px */
     }
 
+    .profile-info h1 {
+        font-size: 1.875rem; /* 30px */
+    }
 
-    header nav {
-        background-color: #1a1a1a;
+    .hamburger-button {
+        display: none; /* Ocultar botón hamburguesa en pantallas grandes */
+    }
+
+    .main-nav {
+        display: flex !important; /* Asegurar que se muestre, sobrescribe .hidden y .main-nav.open */
+        width: auto; /* Ajustar al contenido */
+        background-color: transparent;
+        margin-top: 0;
+    }
+
+    .main-nav ul {
+        flex-direction: row; /* Horizontal en escritorio */
+        gap: 1.5rem; /* 24px de espacio entre elementos */
+    }
+
+    .main-nav li {
+        width: auto;
+    }
+
+    .main-nav .nav-item {
+        padding: 0.25rem 0; /* Menos padding vertical */
+        border-bottom: none;
+        position: relative; /* Para el subrayado activo */
+    }
+    .main-nav .nav-item:hover {
+        background-color: transparent;
+        color: var(--accent-color);
+    }
+    .main-nav .nav-item.active-link {
+        color: var(--accent-color);
+        font-weight: 600;
+        background-color: transparent;
+    }
+    .main-nav .nav-item.active-link::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
         width: 100%;
-        box-sizing: border-box;
-        margin-top: 0;
+        height: 2px;
+        background-color: var(--accent-color);
     }
 
-    header nav ul {
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        padding: 10px 0;
-        margin: 0;
+
+    /* Contenido Principal */
+    .home-section h2 {
+        font-size: 2.25rem; /* 36px */
+    }
+    .certificate-section h3 {
+         font-size: 1.5rem; /* 24px */
     }
 
-    header nav ul li {
-        margin: 0 15px;
-    }
-
-    header nav ul li a {
-        color: #d0d0d0;
-        text-decoration: none;
-        font-size: 1em;
-        padding: 5px 10px;
-    }
-
-    header nav ul li a:hover,
-    header nav ul li a:focus {
-        color: #ffffff;
-    }
-
-    header nav ul li.active a,
-    header nav ul li a.active {
-        color: #ffd700;
-        font-weight: bold;
-    }
-    main {
-        max-width: 1200px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: #ffffff;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-    }
-
-    main>h1 {
-        font-size: 2em;
-        padding: 10px 0 20px 0;
-        text-align: left;
-        margin: 0;
-    }
-
-    section>h2 {
-        font-size: 1.5em;
-        padding: 10px 0 20px 0;
-        text-align: center;
-        margin: 0;
-    }
-
-    .content-columns {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        margin-bottom: 20px;
-    }
-
-    .content-columns>section {
-        flex-basis: calc(50% - 10px);
-        margin-bottom: 0;
-        display: flex;
-        align-content: center;
-        flex-direction: column;
-        background-color: #f9f9f9;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    }
-
-    .content-columns>section h2.section-title {
-        margin-top: 0;
-        border-radius: 5px 5px 0 0;
-
-    }
-
-    .content-columns>section#work ul,
-    .content-columns>section#city p,
-    .content-columns>section#city img {
-        padding: 15px;
-    }
-
-    .content-columns>section#city img {
-        margin-top: 0;
-        max-width: 100%;
-    }
-
-    #courses {
-        background-color: #f9f9f9;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        padding: 0;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    }
-
-    #courses h2.section-title {
-        border-radius: 5px 5px 0 0;
-
-    }
-
-    #courses nav ul {
+    .content-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 15px;
-        padding: 20px;
+        grid-template-columns: 1fr 1fr; /* Dos columnas */
+        gap: 2rem; /* 32px */
     }
 
+    .card {
+        margin-bottom: 0; /* Ya hay gap en el grid */
+    }
 
-    footer {
-        max-width: 1200px;
-        margin: 0 auto;
-        margin-top: 30px;
-        border-radius: 0 0 8px 8px;
+    /* Sección de Certificados */
+    .filter-buttons {
+        flex-direction: row; /* Horizontal en escritorio */
+        justify-content: center;
+        gap: 1rem;
+    }
 
+    .filter-btn {
+        width: auto; /* Ajustar al contenido */
+        padding: 0.75rem 2rem; /* Más padding horizontal */
+    }
+
+    .courses-grid {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+        gap: 1.5rem; /* 24px */
     }
 }
