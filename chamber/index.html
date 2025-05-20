@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timbuktu Chamber of Commerce</title>
+
+    <meta property="og:title" content="Timbuktu Chamber of Commerce - Connecting Our Community" />
+    <meta property="og:description" content="Join the Timbuktu Chamber of Commerce to grow your business, connect with local leaders, and discover opportunities in Timbuktu." />
+    <meta property="og:image" content="https://placehold.co/1200x630/764ba2/white?text=Timbuktu+Chamber" /> <meta property="og:url" content="https://www.yourtimbuktuccdomain.com" /> <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo-title">
+                <img src="https://placehold.co/50x50/764ba2/white?text=Logo" alt="Timbuktu Chamber Logo" class="logo">
+                <div>
+                    <h1 class="site-name">Timbuktu</h1>
+                    <p class="site-subtitle">Chamber of Commerce</p>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <a href="#">Home</a>
+                <a href="#">Directory</a>
+                <a href="#">Join</a>
+                <a href="#">Discover</a>
+            </nav>
+
+            <div class="header-controls">
+                 <button id="darkModeToggle" aria-label="Toggle Dark Mode" class="dark-mode-button">
+                    <svg class="icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button id="mobileMenuButton" class="mobile-menu-trigger" aria-label="Open main menu">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="icon-menu" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="mobile-nav hidden">
+            <a href="#">Home</a>
+            <a href="#">Directory</a>
+            <a href="#">Join</a>
+            <a href="#">Discover</a>
+        </div>
+    </header>
+
+    <main class="container main-content">
+
+        <section class="hero-section">
+            <div class="hero-image-placeholder">
+                <p>Scalable, Responsive Hero Image</p>
+            </div>
+            <div class="hero-cta">
+                <button class="button button-primary">
+                    Keynote Tickets
+                </button>
+            </div>
+        </section>
+
+        <h2 class="section-title page-title-home">Home</h2>
+
+        <section class="content-grid">
+            <div class="card events-card">
+                <h3 class="card-title">Events</h3>
+                <div class="events-list">
+                    <div class="event-item">
+                        <h4 class="event-name">Community Meetup</h4>
+                        <p class="event-details">Next Tuesday, 7:00 PM</p>
+                    </div>
+                    <div class="event-item">
+                        <h4 class="event-name">Business Workshop</h4>
+                        <p class="event-details">Oct 15th, 9:00 AM - 4:00 PM</p>
+                    </div>
+                     <div class="event-item">
+                        <h4 class="event-name">Annual Gala</h4>
+                        <p class="event-details">Nov 5th, 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weather-section">
+                <div class="card current-weather-card">
+                    <h3 class="card-title">Current Weather</h3>
+                    <div class="weather-main">
+                        <i data-lucide="cloud-sun" class="weather-icon"></i> <div>
+                            <p class="temperature">75°F</p>
+                            <p class="weather-description">Partly Cloudy</p>
+                        </div>
+                    </div>
+                    <div class="weather-details">
+                        <p>High: <span class="font-medium">85°F</span></p>
+                        <p>Low: <span class="font-medium">52°F</span></p>
+                        <p>Humidity: <span class="font-medium">34%</span></p>
+                        <p>Sunrise: <span class="font-medium">7:30 AM</span></p>
+                        <p>Sunset: <span class="font-medium">9:59 PM</span></p>
+                    </div>
+                </div>
+
+                <div class="card forecast-card">
+                    <h3 class="card-title">Weather Forecast</h3>
+                    <div class="forecast-list">
+                        <div class="forecast-item">
+                            <span>Today:</span>
+                            <span class="font-medium">90°F</span>
+                        </div>
+                        <div class="forecast-item">
+                            <span>Wednesday:</span>
+                            <span class="font-medium">89°F</span>
+                        </div>
+                        <div class="forecast-item">
+                            <span>Thursday:</span>
+                            <span class="font-medium">68°F</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="spotlights-section">
+            <h2 class="section-title">Business Spotlights</h2>
+            <div class="spotlights-grid">
+                <div class="card business-card">
+                    <img src="https://placehold.co/300x200/a3a3a3/4a4a4a?text=Business+Image" alt="Business 1" class="business-image">
+                    <h4 class="business-name">Desert Delights Bakery</h4>
+                    <p class="business-tagline">"Sweet treats from the heart of the sands."</p>
+                    <div class="business-contact">
+                        <p>EMAIL: <a href="mailto:info@desertdelights.com">info@desertdelights.com</a></p>
+                        <p>PHONE: <a href="tel:800-555-1234">800-555-1234</a></p>
+                        <p>URL: <a href="http://desertdelights.com" target="_blank">desertdelights.com</a></p>
+                    </div>
+                </div>
+                <div class="card business-card">
+                    <img src="https://placehold.co/300x200/a3a3a3/4a4a4a?text=Business+Image" alt="Business 2" class="business-image">
+                    <h4 class="business-name">Oasis Outfitters</h4>
+                    <p class="business-tagline">"Gear up for your Timbuktu adventure."</p>
+                    <div class="business-contact">
+                        <p>EMAIL: <a href="mailto:contact@oasisoutfitters.com">contact@oasisoutfitters.com</a></p>
+                        <p>PHONE: <a href="tel:800-555-5678">800-555-5678</a></p>
+                        <p>URL: <a href="http://oasisoutfitters.com" target="_blank">oasisoutfitters.com</a></p>
+                    </div>
+                </div>
+                <div class="card business-card">
+                    <img src="https://placehold.co/300x200/a3a3a3/4a4a4a?text=Business+Image" alt="Business 3" class="business-image">
+                    <h4 class="business-name">Mali Tech Solutions</h4>
+                    <p class="business-tagline">"Innovative technology for a brighter future."</p>
+                    <div class="business-contact">
+                        <p>EMAIL: <a href="mailto:support@malitech.com">support@malitech.com</a></p>
+                        <p>PHONE: <a href="tel:800-555-9012">800-555-9012</a></p>
+                        <p>URL: <a href="http://malitech.com" target="_blank">malitech.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer-main">
+        <div class="container footer-container-main">
+            <div class="footer-grid">
+                <div class="footer-contact">
+                    <h5 class="footer-heading">Timbuktu Chamber of Commerce</h5>
+                    <p>10 Rue De La Paix</p>
+                    <p>Timbuktu, Mali 999</p>
+                    <p class="footer-email">Email: <a href="mailto:info@timbuktucc.org">info@timbuktucc.org</a></p>
+                    <p class="footer-phone">Phone: <a href="tel:+2235552300">(223) 555-2300</a></p>
+                </div>
+
+                <div class="footer-social">
+                     <a href="#" class="social-link" aria-label="YouTube">
+                        <i data-lucide="youtube" class="social-icon-svg"></i> </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i data-lucide="twitter" class="social-icon-svg"></i> </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                         <i data-lucide="linkedin" class="social-icon-svg"></i> </a>
+                </div>
+
+                <div class="footer-project-info">
+                    <p class="project-title">WDD231 Class Project</p>
+                    <p>Marie Martínez</p>
+                    <p class="copyright">&copy; <span id="currentYear"></span> Timbuktu Chamber of Commerce</p>
+                    <p>Last Modification: <span id="lastModified"></span></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Designed with care for the Timbuktu community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
