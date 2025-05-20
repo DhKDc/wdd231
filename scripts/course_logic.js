@@ -1,7 +1,5 @@
 // scripts/course_logic.js
 document.addEventListener('DOMContentLoaded', () => {
-    // LA VARIABLE 'courses' DEBERÍA ESTAR DISPONIBLE GLOBALMENTE DESDE course_data.js
-
     const coursesContainer = document.getElementById('coursesContainer');
     const filterButtons = document.querySelectorAll('#filterButtonsContainer .filter-btn');
     const totalCreditsElement = document.getElementById('totalCreditsValue');
@@ -41,13 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
             courseCard.classList.add('course-card');
             courseCard.classList.add(course.completed ? 'completed' : 'not-completed');
             
-            const fullDescription = `${course.description}\n\nTecnologías: ${course.technology.join(', ')}`;
+            // Mantenemos el tooltip para información detallada al pasar el ratón
+            const fullDescription = `${course.description}\n\nTecnologías: ${course.technology.join(', ')}\nCréditos: ${course.credits}`;
             courseCard.setAttribute('title', fullDescription);
 
+            // Contenido de la tarjeta: Solo Asignatura y Número
             courseCard.innerHTML = `<h4>${course.subject} ${course.number}</h4>`;
-
+            
             coursesContainer.appendChild(courseCard);
-            `;
         });
     }
 
@@ -60,15 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 displayCourses(filterValue);
             });
         });
-    } else {
-        // console.warn("Botones de filtro no encontrados.");
     }
     
-    // --- INICIALIZACIÓN ---
     const initialActiveFilterButton = document.querySelector('#filterButtonsContainer .filter-btn[data-filter="ALL"]');
     if (initialActiveFilterButton) {
         initialActiveFilterButton.classList.add('active-filter');
-    } else if (filterButtons.length > 0) { // Si no hay un botón "ALL" específico, activa el primero
+    } else if (filterButtons.length > 0) {
         filterButtons[0].classList.add('active-filter');
     }
 
