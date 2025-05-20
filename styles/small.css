@@ -256,6 +256,20 @@ main.container {
     color: var(--secondary-text-color); /* O #FEFCE8 (yellow-50) para texto claro sobre amarillo oscuro */
 }
 
+/* Estilos para el contador de créditos totales */
+.total-credits-container {
+    text-align: center;
+    margin-top: 1rem; /* Espacio después de los filtros */
+    margin-bottom: 1.5rem; /* Espacio antes de la cuadrícula de cursos */
+    font-size: 1rem; /* 16px */
+    font-weight: 500;
+    color: var(--secondary-text-color);
+}
+
+#totalCreditsValue {
+    font-weight: 700; /* Bold */
+    color: var(--accent-color); /* Usar el color de acento */
+}
 
 /* Pie de página */
 .site-footer {
