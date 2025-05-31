@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rancagua Chamber of Commerce</title>
+
+    <meta property="og:title" content="Rancagua Chamber of Commerce - Connecting Our Community" />
+    <meta property="og:description"
+        content="Join the Rancagua Chamber of Commerce to grow your business, connect with local leaders, and discover opportunities in Rancagua." />
+    <meta property="og:image" content="https://placehold.co/1200x630/764ba2/white?text=Rancagua+Chamber" />
+    <meta property="og:url" content="https://www.yourrancaguaccdomain.com" />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo-title">
+                <img src="https://placehold.co/50x50/764ba2/white?text=Logo" alt="Rancagua Chamber Logo" class="logo">
+                <div>
+                    <h1 class="site-name">Rancagua</h1>
+                    <p class="site-subtitle">Chamber of Commerce</p>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="directory.html">Directory</a>
+                <a href="#">Join</a>
+                <a href="#">Discover</a>
+            </nav>
+
+            <div class="header-controls">
+                <button id="darkModeToggle" aria-label="Toggle Dark Mode" class="dark-mode-button">
+                    <svg class="icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+                <button id="mobileMenuButton" class="mobile-menu-trigger" aria-label="Open main menu">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="icon-menu" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"
+                        width="24" height="24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="mobile-nav hidden">
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="#">Join</a>
+            <a href="#">Discover</a>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <h2 class="section-title page-title-home">Member Directory</h2>
+        <div class="directory-controls">
+            <button id="gridViewButton" class="active" aria-label="Grid View">Grid</button>
+            <button id="listViewButton" aria-label="List View">List</button>
+        </div>
+        <div id="membersContainer" class="grid-view">
+        </div>
+    </main>
+
+    <footer class="site-footer-main">
+        <div class="container footer-container-main">
+            <div class="footer-grid">
+                <div class="footer-contact">
+                    <h5 class="footer-heading">Rancagua Chamber of Commerce</h5>
+                    <p>10 Rue De La Paix</p>
+                    <p>Timbuktu, Mali 999</p>
+                    <p class="footer-email">Email: <a href="mailto:info@timbuktucc.org">info@timbuktucc.org</a></p>
+                    <p class="footer-phone">Phone: <a href="tel:+2235552300">(223) 555-2300</a></p>
+                </div>
+
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <i data-lucide="youtube" class="social-icon-svg"></i> </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i data-lucide="twitter" class="social-icon-svg"></i> </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i data-lucide="linkedin" class="social-icon-svg"></i> </a>
+                </div>
+
+                <div class="footer-project-info">
+                    <p class="project-title">WDD231 Class Project</p>
+                    <p>Daniel Toledo</p>
+                    <p class="copyright">&copy; <span id="currentYear"></span> Rancagua Chamber of Commerce</p>
+                    <p>Last Modification: <span id="lastModified"></span></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Designed with care for the Rancagua community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/directory.js"></script>
+</body>
+
+</html>
