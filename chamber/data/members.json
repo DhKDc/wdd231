@@ -4,7 +4,7 @@
         "address": "Av. Libertador Bernardo O'Higgins 101, Rancagua",
         "phone": "+56 72 220 1234",
         "websiteURL": "https://www.vinadelsol.cl",
-        "imageFileName": "vina_del_sol.webp",
+        "imageFileName": "vinadelsol.webp",
         "membershipLevel": 3,
         "description": "Renowned local vineyard offering tours and wine tasting. Gold member of the chamber."
     },
@@ -13,7 +13,7 @@
         "address": "Calle Estado 202, Rancagua",
         "phone": "+56 72 220 5678",
         "websiteURL": "https://www.mineralsandinos.com",
-        "imageFileName": "minerals_andinos.webp",
+        "imageFileName": "mineralsandinos.webp",
         "membershipLevel": 3,
         "description": "Leading mining corporation with a strong commitment to sustainable practices. Gold member."
     },
@@ -22,7 +22,7 @@
         "address": "Camino La Cruz 303, Rancagua",
         "phone": "+56 72 220 9012",
         "websiteURL": "https://www.agriculturaviva.cl",
-        "imageFileName": "agricultura_viva.webp",
+        "imageFileName": "agriculturaviva.webp",
         "membershipLevel": 2,
         "description": "Suppliers of high-quality agricultural products and equipment. Silver member."
     },
@@ -31,7 +31,7 @@
         "address": "Paseo Independencia 404, Rancagua",
         "phone": "+56 72 220 3456",
         "websiteURL": "https://www.tecnorancagua.cl",
-        "imageFileName": "tecno_rancagua.webp",
+        "imageFileName": "tecnorancagua.webp",
         "membershipLevel": 2,
         "description": "Your local partner for IT solutions and tech support. Silver member."
     },
@@ -40,7 +40,7 @@
         "address": "Plaza de los Héroes 505, Rancagua",
         "phone": "+56 72 220 7890",
         "websiteURL": "https://www.cafeelencuentro.cl",
-        "imageFileName": "cafe_el_encuentro.webp",
+        "imageFileName": "cafeelencuentro.webp",
         "membershipLevel": 1,
         "description": "Cozy café in the heart of the city, perfect for meetings and a good coffee. Member."
     },
@@ -49,7 +49,7 @@
         "address": "German Riesco 606, Rancagua",
         "phone": "+56 72 220 1122",
         "websiteURL": "https://www.hotelcordillera.cl",
-        "imageFileName": "hotel_cordillera.webp",
+        "imageFileName": "hotelcordillera.webp",
         "membershipLevel": 1,
         "description": "Comfortable and centrally located hotel for business and leisure travelers. Member."
     },
@@ -58,7 +58,7 @@
         "address": "Mercado Modelo, Local 17, Rancagua",
         "phone": "+56 72 220 4455",
         "websiteURL": "https://www.artesaniascachapoal.cl",
-        "imageFileName": "artesanias_cachapoal.webp",
+        "imageFileName": "artesaniasdelcachapoal.webp",
         "membershipLevel": 1,
         "description": "Authentic local crafts and souvenirs from the Cachapoal Valley. Member."
     }
