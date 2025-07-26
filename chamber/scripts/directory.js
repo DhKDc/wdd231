@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const membersContainer = document.getElementById('membersContainer');
+    const membersContainer = document.querySelector('.members-container');
     if (!membersContainer) {
         return;
     }

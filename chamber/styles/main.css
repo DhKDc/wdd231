@@ -1,3 +1,6 @@
+/* =================================================================== */
+/* BASE & UTILITY STYLES
+/* =================================================================== */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #f9fafb;
@@ -54,6 +57,21 @@ a:hover {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* =================================================================== */
+/* HEADER & NAVIGATION
+/* =================================================================== */
 .site-header {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -74,62 +92,11 @@ a:hover {
     height: 5rem;
 }
 
-.logo-title {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-
+.logo-title .logo {
     max-width: 200px;
     height: auto;
     margin-right: 0.75rem;
     border-radius: 3px;
-}
-
-.site-name {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #1f2937;
-}
-
-.dark .site-name {
-    color: #f3f4f6;
-}
-
-.site-subtitle {
-    font-size: 0.875rem;
-    color: #4b5563;
-}
-
-.dark .site-subtitle {
-    color: #d1d5db;
-}
-
-.main-nav {
-    display: none;
-}
-
-.main-nav a {
-    color: #4b5563;
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.375rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    margin-left: 0.5rem;
-}
-
-.main-nav a:hover {
-    color: #4f46e5;
-    text-decoration: none;
-}
-
-.dark .main-nav a {
-    color: #d1d5db;
-}
-
-.dark .main-nav a:hover {
-    color: #a5b4fc;
 }
 
 .header-controls {
@@ -162,16 +129,34 @@ a:hover {
     background-color: #4b5563;
 }
 
-.dark-mode-button svg,
-.mobile-menu-trigger svg {
-    height: 1.5rem;
-    width: 1.5rem;
+/* Main Navigation (Desktop) */
+.main-nav {
+    display: none; /* Hidden on mobile */
 }
 
-.mobile-menu-trigger {
-    margin-left: 0.75rem;
+.main-nav a {
+    color: #4b5563;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
 }
 
+.main-nav a:hover {
+    color: #4f46e5;
+    text-decoration: none;
+}
+
+.dark .main-nav a {
+    color: #d1d5db;
+}
+
+.dark .main-nav a:hover {
+    color: #a5b4fc;
+}
+
+/* Mobile Navigation */
 .mobile-nav {
     padding: 0.5rem 0.75rem;
     border-top: 1px solid #e5e7eb;
@@ -205,42 +190,19 @@ a:hover {
     background-color: #374151;
 }
 
+/* =================================================================== */
+/* MAIN CONTENT & CARDS
+/* =================================================================== */
 .main-content {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
-.hero-section {
-    position: relative;
-    margin-bottom: 3rem;
-}
-
-.hero-image-placeholder {
-    width: 100%;
-    height: 16rem;
-    background: linear-gradient(to right, #667eea, #764ba2);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 600;
-    border-radius: 0.5rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-.hero-cta {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-}
-
 .section-title {
     font-size: 1.875rem;
     font-weight: 700;
-    color: #1f2937;
     margin-bottom: 1.5rem;
+    color: #1f2937;
 }
 
 .dark .section-title {
@@ -268,17 +230,48 @@ a:hover {
 
 .dark .card {
     background-color: #374151;
+    border: 1px solid #4b5563;
 }
 
 .card-title {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #1f2937;
+    margin-top: 0;
     margin-bottom: 1rem;
+    color: #1f2937;
 }
 
 .dark .card-title {
     color: #f3f4f6;
+}
+
+/* =================================================================== */
+/* HOME PAGE SECTIONS
+/* =================================================================== */
+.hero-section {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.hero-image-placeholder {
+    width: 100%;
+    height: 16rem;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.hero-cta {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
 }
 
 .content-grid {
@@ -288,143 +281,14 @@ a:hover {
     margin-bottom: 3rem;
 }
 
-.events-list .event-item {
-    padding: 1rem;
-    background-color: #eef2ff;
-    border-radius: 0.375rem;
-    margin-bottom: 1rem;
-}
-
-.events-list .event-item:last-child {
-    margin-bottom: 0;
-}
-
-.dark .events-list .event-item {
-    background-color: #312e81;
-}
-
-.event-name {
-    font-weight: 500;
-    color: #4338ca;
-}
-
-.dark .event-name {
-    color: #a5b4fc;
-}
-
-.event-details {
-    font-size: 0.875rem;
-    color: #4b5563;
-}
-
-.dark .event-details {
-    color: #d1d5db;
-}
-
-.weather-section {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
-
-.weather-main {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.weather-icon {
-    width: 4rem;
-    height: 4rem;
-    color: #f59e0b;
-    margin-right: 1rem;
-}
-
-.dark .weather-icon {
-    color: #fcd34d;
-}
-
-.temperature {
-    font-size: 2.25rem;
-    font-weight: 700;
-    color: #1f2937;
-}
-
-.dark .temperature {
-    color: #f3f4f6;
-}
-
-.weather-description {
-    color: #4b5563;
-}
-
-.dark .weather-description {
-    color: #d1d5db;
-}
-
-.weather-details {
-    font-size: 0.875rem;
-    color: #4b5563;
-}
-
-.dark .weather-details {
-    color: #d1d5db;
-}
-
-.weather-details p {
-    margin-bottom: 0.25rem;
-}
-
-.weather-details .font-medium {
-    font-weight: 500;
-}
-
-.forecast-list .forecast-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem;
-    background-color: #f3f4f6;
-    border-radius: 0.375rem;
-    margin-bottom: 0.75rem;
-}
-
-.forecast-list .forecast-item:last-child {
-    margin-bottom: 0;
-}
-
-.dark .forecast-list .forecast-item {
-    background-color: #4b5563;
-}
-
-.forecast-item span:first-child {
-    color: #374151;
-}
-
-.dark .forecast-item span:first-child {
-    color: #d1d5db;
-}
-
-.forecast-item span.font-medium {
-    font-weight: 600;
-    color: #4f46e5;
-}
-
-.dark .forecast-item span.font-medium {
-    color: #a5b4fc;
-}
-
-.spotlights-section {
-    margin-bottom: 3rem;
-}
-
+/* Business Spotlights Card */
 .spotlights-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
 }
 
-.business-image {
+.business-card img {
     width: 100%;
     height: 10rem;
     object-fit: cover;
@@ -432,240 +296,50 @@ a:hover {
     margin-bottom: 1rem;
 }
 
-.business-name {
+.business-card h4 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: #1f2937;
 }
 
-.dark .business-name {
+.dark .business-card h4 {
     color: #f3f4f6;
 }
 
-.business-tagline {
+.business-card p {
     font-size: 0.875rem;
     color: #6b7280;
     margin-bottom: 0.75rem;
 }
 
-.dark .business-tagline {
+.dark .business-card p {
     color: #9ca3af;
 }
 
-.business-contact {
+.business-card .business-contact {
     font-size: 0.75rem;
     color: #4b5563;
 }
 
-.dark .business-contact {
+.dark .business-card .business-contact {
     color: #d1d5db;
 }
 
-.business-contact p {
+.business-card .business-contact p {
     margin-bottom: 0.25rem;
 }
 
-.business-contact a {
+.business-card .business-contact a {
     color: #4f46e5;
 }
 
-.business-contact a:hover {
-    text-decoration: underline;
-}
-
-.dark .business-contact a {
+.dark .business-card .business-contact a {
     color: #a5b4fc;
 }
 
-.site-footer-main {
-    background-color: #1f2937;
-    color: #d1d5db;
-    padding-top: 3rem;
-    padding-bottom: 2rem;
-}
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.footer-heading {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 0.75rem;
-}
-
-.footer-contact p,
-.footer-project-info p {
-    font-size: 0.875rem;
-    margin-bottom: 0.25rem;
-}
-
-.footer-contact a,
-.footer-project-info a {
-    color: inherit;
-}
-
-.footer-contact a:hover,
-.footer-project-info a:hover {
-    color: #a5b4fc;
-    text-decoration: underline;
-}
-
-.footer-email,
-.footer-phone {
-    margin-top: 0.5rem;
-}
-
-.footer-social {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1.5rem;
-}
-
-.social-link {
-    color: #9ca3af;
-    transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.social-link:hover {
-    color: white;
-    transform: scale(1.1);
-}
-
-.social-icon-svg {
-    width: 1.75rem;
-    height: 1.75rem;
-}
-
-.footer-project-info {
-    font-size: 0.875rem;
-}
-
-.project-title {
-    font-weight: 600;
-    color: white;
-}
-
-.copyright {
-    margin-top: 0.5rem;
-}
-
-.footer-bottom {
-    border-top: 1px solid #374151;
-    padding-top: 2rem;
-    text-align: center;
-    font-size: 0.875rem;
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-}
-
-@media (min-width: 640px) {
-    .container {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-
-    .hero-image-placeholder {
-        height: 20rem;
-    }
-
-    .hero-cta {
-        bottom: 1.5rem;
-        right: 1.5rem;
-    }
-
-    .weather-section {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .spotlights-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 768px) {
-    .main-nav {
-        display: flex;
-        align-items: center;
-    }
-
-    .mobile-menu-trigger {
-        display: none;
-    }
-
-    .mobile-nav {
-        display: none !important;
-    }
-
-    .hero-image-placeholder {
-        height: 24rem;
-    }
-
-    .hero-cta {
-        bottom: 2rem;
-        right: 2rem;
-    }
-
-    .content-grid {
-        grid-template-columns: 1fr 2fr;
-    }
-
-    .events-card {}
-
-    .weather-section {}
-
-    .footer-grid {
-        grid-template-columns: repeat(3, 1fr);
-        text-align: left;
-    }
-
-    .footer-social {
-        justify-content: center;
-    }
-
-    .footer-project-info {
-        text-align: right;
-    }
-}
-
-@media (min-width: 1024px) {
-    .container {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-
-    .spotlights-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.dark .card {
-    border: 1px solid #4b5563;
-}
-
-.dark .events-list .event-item {
-    border: 1px solid #4f46e5;
-}
-
-.dark .forecast-list .forecast-item {
-    border: 1px solid #374151;
-}
-
+/* =================================================================== */
+/* DIRECTORY PAGE
+/* =================================================================== */
 .directory-controls {
     margin-bottom: 1.5rem;
     text-align: center;
@@ -698,59 +372,18 @@ a:hover {
     color: white;
 }
 
-#membersContainer.grid-view {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-}
-
-#membersContainer.list-view .member-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border: 1px solid #e5e7eb;
-}
-
-#membersContainer.list-view .member-card img {
-    display: none;
-}
-
-#membersContainer.list-view .member-card h4 {
-    margin-bottom: 0.25rem;
-}
-
-#membersContainer.list-view .member-card p {
-    margin-bottom: 0.25rem;
-    font-size: 0.875rem;
-}
-
-#membersContainer.list-view .member-card a {
-    font-size: 0.875rem;
-}
-
+/* Member Cards - Base styles for grid and list */
 .member-card {
     background-color: white;
     border: 1px solid #e5e7eb;
     border-radius: 0.5rem;
     padding: 1.5rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    text-align: center;
 }
 
 .dark .member-card {
     background-color: #374151;
     border-color: #4b5563;
-}
-
-.member-card img {
-    width: 150px;
-    height: auto;
-    object-fit: contain;
-    margin: 0 auto 1rem;
-    border: 2px solid #4f46e5;
-    border-radius: 0;
 }
 
 .member-card h4 {
@@ -771,55 +404,220 @@ a:hover {
 
 .member-card a {
     color: #4f46e5;
-    text-decoration: none;
     font-weight: 500;
-}
-
-.member-card a:hover {
-    text-decoration: underline;
 }
 
 .dark .member-card a {
     color: #a5b4fc;
 }
 
-.membership-level-1::before,
-.membership-level-2::before,
-.membership-level-3::before {
-    content: 'Membership: ';
-    font-weight: bold;
+.member-card a:hover {
+    text-decoration: underline;
 }
 
-.membership-level-1::after {
-    content: 'Bronze Member';
+/* Grid View Specifics */
+.members-container.grid-view {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to 1 column on mobile */
+    gap: 1.5rem;
 }
 
-.membership-level-2::after {
-    content: 'Silver Member';
-    color: #718096;
+.grid-view .member-card {
+    text-align: center;
 }
 
-.membership-level-3::after {
-    content: 'Gold Member';
-    color: #d69e2e;
+.grid-view .member-card img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 1rem;
+    border: 2px solid #4f46e5;
+    border-radius: 0;
 }
 
+/* List View Specifics */
+.members-container.list-view .member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.list-view .member-card img {
+    display: none; /* Hidden on mobile list view by default */
+}
+
+.list-view .member-card p {
+    margin-bottom: 0.25rem;
+}
+
+
+/* =================================================================== */
+/* FOOTER
+/* =================================================================== */
+.site-footer-main {
+    background-color: #1f2937;
+    color: #d1d5db;
+    padding: 3rem 1rem 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-heading {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+.footer-contact p,
+.footer-project-info p {
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.footer-contact a {
+    color: inherit;
+}
+
+.footer-contact a:hover {
+    color: #a5b4fc;
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.social-link {
+    color: #9ca3af;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    border-top: 1px solid #374151;
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+
+/* =================================================================== */
+/* RESPONSIVE STYLES (Tablet and up)
+/* =================================================================== */
 @media (min-width: 768px) {
-    #membersContainer.list-view .member-card {
+    /* Layout */
+    .main-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile-menu-trigger,
+    .mobile-nav {
+        display: none !important;
+    }
+
+    .hero-image-placeholder {
+        height: 24rem;
+    }
+
+    .hero-cta {
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .spotlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Directory Grid View on Tablet */
+    .members-container.grid-view {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* List View on Desktop */
+    .members-container.list-view .member-card {
         flex-direction: row;
         align-items: center;
         text-align: left;
     }
 
-    #membersContainer.list-view .member-card img {
-        display: block;
+    .members-container.list-view .member-card img {
+        display: block; /* Show image on larger screens */
         width: 80px;
         height: 80px;
-        margin-right: 1rem;
+        margin-right: 1.5rem;
         margin-bottom: 0;
+        border-radius: 4px;
+        border: none;
     }
 
-    #membersContainer.list-view .member-card div {
+    .members-container.list-view .member-card div {
         flex-grow: 1;
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-project-info {
+        text-align: right;
+    }
+}
+
+/* =================================================================== */
+/* RESPONSIVE STYLES (Desktop and up)
+/* =================================================================== */
+@media (min-width: 1024px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .spotlights-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Directory Grid View on Desktop */
+    .grid-view {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .list-view .member-card img {
+        display: flex;
+        width: 100px;
+        object-fit: cover;
+        border-radius: 5%;
+        margin-right: 1.5rem;
+    }
+
+    .list-view .member-card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
     }
 }
