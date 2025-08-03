@@ -9,82 +9,57 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn('Lucide icons library not found. Icons will not be rendered.');
     }
 
-    // Mobile Menu Toggle
+    // --- Mobile Menu Toggle ---
     const mobileMenuButton = document.getElementById('mobileMenuButton');
     const mobileMenu = document.getElementById('mobileMenu');
 
     if (mobileMenuButton && mobileMenu) {
         mobileMenuButton.addEventListener('click', () => {
-            const isMenuOpen = !mobileMenu.classList.contains('hidden');
-            mobileMenu.classList.toggle('hidden');
-
+            // Toggle 'active' class on the button for icon switching
+            mobileMenuButton.classList.toggle('active');
+            
+            // Toggle 'open' class on the menu to show/hide it
+            const isMenuOpen = mobileMenu.classList.toggle('open');
+            
             // Update ARIA attribute for accessibility
-            mobileMenuButton.setAttribute('aria-expanded', String(!isMenuOpen));
-
-            // Optional: Change button icon based on menu state
-            // This requires specific SVG content or classes for icons
-            if (!isMenuOpen) { // If menu was closed, now it's open
-                mobileMenuButton.innerHTML = `
-                    <svg class="icon-close" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" width="24" height="24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>`;
-            } else { // If menu was open, now it's closed
-                mobileMenuButton.innerHTML = `
-                    <svg class="icon-menu" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" width="24" height="24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>`;
-            }
-            if (typeof lucide !== 'undefined') { // Re-create icons if they were part of the button
-                 lucide.createIcons({
-                    attrs: {'aria-hidden': 'true', width: 24, height: 24}, // Example attributes
-                    nodes: [mobileMenuButton] // Only process icons within the button
-                });
-            }
+            mobileMenuButton.setAttribute('aria-expanded', isMenuOpen);
         });
     } else {
         console.warn('Mobile menu button or menu element not found.');
     }
 
-    // Dark Mode Toggle
+    // --- Dark Mode Toggle ---
     const darkModeToggle = document.getElementById('darkModeToggle');
     const htmlElement = document.documentElement;
 
     if (darkModeToggle) {
-        const moonIcon = darkModeToggle.querySelector('.icon-moon');
-        const sunIcon = darkModeToggle.querySelector('.icon-sun');
-
-        // Function to set the theme
-        const setTheme = (isDark) => {
+        // Function to apply the theme
+        const applyTheme = (isDark) => {
             if (isDark) {
                 htmlElement.classList.add('dark');
-                moonIcon.style.display = 'none';
-                sunIcon.style.display = 'block';
                 localStorage.setItem('theme', 'dark');
             } else {
                 htmlElement.classList.remove('dark');
-                sunIcon.style.display = 'none';
-                moonIcon.style.display = 'block';
                 localStorage.setItem('theme', 'light');
             }
         };
 
-        // Check for saved theme preference
+        // Check for saved preference or system setting
         if (localStorage.getItem('theme') === 'dark' || 
         (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            setTheme(true);
+            applyTheme(true);
         } else {
-            setTheme(false);
+            applyTheme(false);
         }
 
-        // Add click event listener
+        // Toggle theme on button click
         darkModeToggle.addEventListener('click', () => {
             const isCurrentlyDark = htmlElement.classList.contains('dark');
-            setTheme(!isCurrentlyDark);
+            applyTheme(!isCurrentlyDark);
         });
     } else {
         console.warn('Dark mode toggle button not found.');
     }
-
 
     // Footer: Current Year and Last Modified
     const currentYearSpan = document.getElementById('currentYear');
