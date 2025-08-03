@@ -90,6 +90,66 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Modal logic
+    const modalLinks = document.querySelectorAll('.modal-link');
+    const modals = document.querySelectorAll('.modal');
+    const closeButtons = document.querySelectorAll('.close-button');
+
+    modalLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modalId = link.getAttribute('data-modal');
+            document.getElementById(modalId).style.display = 'block';
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            button.closest('.modal').style.display = 'none';
+        });
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal')) {
+            e.target.style.display = 'none';
+        }
+    });
+
+    // Timestamp logic
+    const timestampField = document.getElementById('timestamp');
+    if (timestampField) {
+        timestampField.value = new Date().toISOString();
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const summaryContainer = document.getElementById('submission-summary');
+    let summaryHTML = '<dl class="submission-details">';
+
+    const labels = {
+        firstName: "First Name",
+        lastName: "Last Name",
+        title: "Title",
+        email: "Email",
+        mobile: "Mobile Phone",
+        organization: "Organization",
+        membershipLevel: "Membership Level",
+        description: "Description",
+        timestamp: "Submission Time"
+    };
+
+    for (const [key, value] of urlParams.entries()) {
+        if (value) {
+            const label = labels[key] || key;
+            let displayValue = value;
+            if (key === 'timestamp') {
+                displayValue = new Date(value).toLocaleString();
+            }
+            summaryHTML += `<dt>${label}</dt><dd>${displayValue}</dd>`;
+        }
+    }
+    summaryHTML += '</dl>';
+    summaryContainer.innerHTML = summaryHTML;
+    
     displaySpotlights();
     fetchWeatherData();
 });
@@ -244,3 +304,4 @@ function displayForecast(data) {
         forecastContainer.appendChild(forecastItem);
     });
 }
+

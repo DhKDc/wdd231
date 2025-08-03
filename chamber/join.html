@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rancagua Chamber of Commerce</title>
+    <meta name="description"
+        content="Join the Rancagua Chamber of Commerce to grow your business, connect with local leaders, and discover opportunities in Rancagua.">
+    <meta name="author" content="Daniel Toledo Fuentes">
+    <meta property="og:title" content="Rancagua Chamber of Commerce">
+    <meta property="og:description"
+        content="Join the Rancagua Chamber of Commerce to grow your business, connect with local leaders, and discover opportunities in Rancagua.">
+    <meta property="og:image" content="https://dhkdc.github.io/wdd231/chamber/directory/images/rancaguacoflogo.webp">
+    <meta property="og:url" content="https://dhkdc.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo-title">
+                <img src="images/rancaguacoflogo.webp" alt="Rancagua Chamber Logo" class="logo">
+            </div>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="directory.html">Directory</a>
+                <a href="join.html">Join</a>
+                <a href="#">Discover</a>
+            </nav>
+
+            <div class="header-controls">
+                <button id="darkModeToggle" aria-label="Toggle Dark Mode" class="dark-mode-button">
+                    <i data-lucide="moon" class="icon-moon"></i>
+                    <i data-lucide="sun" class="icon-sun"></i>
+                </button>
+                <button id="mobileMenuButton" class="mobile-menu-trigger" aria-label="Open main menu"
+                    aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <i data-lucide="menu" class="icon-menu"></i>
+                    <i data-lucide="x" class="icon-close"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="mobile-nav hidden">
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+            <a href="#">Discover</a>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <div class="join-container">
+            <div class="form-section">
+                <h2 class="form-title">Membership Application Form</h2>
+                <form action="thankyou.html" method="get" class="join-form">
+                    <label>First Name
+                        <input type="text" name="firstName" title="Applicant's First Name" autocomplete="given-name"
+                            required>
+                    </label>
+                    <label>Last Name
+                        <input type="text" name="lastName" title="Applicant's Last Name" autocomplete="family-name"
+                            required>
+                    </label>
+                    <label>Organizational Title
+                        <input type="text" name="title" title="Applicant's Organizational Title"
+                            autocomplete="organization-title" pattern="[a-zA-Z\s-]{7,}">
+                    </label>
+                    <label>Email Address
+                        <input type="email" name="email" title="Applicant's Email Address" autocomplete="email"
+                            placeholder="john89@gmail.com" required>
+                    </label>
+                    <label>Mobile Phone Number
+                        <input type="tel" name="mobile" title="Applicant's Mobile Phone Number" autocomplete="tel"
+                            placeholder="987-555-1234" required>
+                    </label>
+                    <label>Business/Organization's Name
+                        <input type="text" name="organization" title="Business or Organization's Name"
+                            autocomplete="organization" required>
+                    </label>
+
+                    <fieldset>
+                        <legend>Membership Level</legend>
+                        <label><input type="radio" name="membershipLevel" value="NP Membership"> NP Membership</label>
+                        <label><input type="radio" name="membershipLevel" value="Bronze Membership"> Bronze
+                            Membership</label>
+                        <label><input type="radio" name="membershipLevel" value="Silver Membership"> Silver
+                            Membership</label>
+                        <label><input type="radio" name="membershipLevel" value="Gold Membership"> Gold Membership</label>
+                    </fieldset>
+
+                    <label>Business/Organization's Description
+                        <textarea name="description" title="Business or Organization's Description"></textarea>
+                    </label>
+
+                    <input type="hidden" id="timestamp" name="timestamp">
+                    <input type="submit" value="Join the Chamber" class="button button-primary">
+                </form>
+            </div>
+            <div class="levels-section">
+                <h2 class="form-title">Membership Levels</h2>
+                <div class="membership-levels">
+                    <div class="membership-card">
+                        <h3>Non Profit Membership Level</h3>
+                        <a href="#" class="modal-link learn-more-btn" data-modal="np-modal">Learn More</a>
+                    </div>
+                    <div class="membership-card">
+                        <h3>Bronze Membership Level</h3>
+                        <a href="#" class="modal-link learn-more-btn" data-modal="bronze-modal">Learn More</a>
+                    </div>
+                    <div class="membership-card">
+                        <h3>Silver Membership Level</h3>
+                        <a href="#" class="modal-link learn-more-btn" data-modal="silver-modal">Learn More</a>
+                    </div>
+                    <div class="membership-card">
+                        <h3>Gold Membership Level</h3>
+                        <a href="#" class="modal-link learn-more-btn" data-modal="gold-modal">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="np-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>NP Membership</h2>
+            <p>This level is for non-profit organizations. Benefits include:</p>
+            <ul>
+                <li>Listing in the chamber directory</li>
+                <li>Access to networking events</li>
+                <li>Discounts on workshops</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Bronze Membership</h2>
+            <p>This level includes all NP benefits plus:</p>
+            <ul>
+                <li>Social media promotion</li>
+                <li>Job postings on the chamber website</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="silver-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Silver Membership</h2>
+            <p>This level includes all Bronze benefits plus:</p>
+            <ul>
+                <li>Featured member spotlight on the homepage</li>
+                <li>One dedicated email blast per year</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="gold-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Gold Membership</h2>
+            <p>This level includes all Silver benefits plus:</p>
+            <ul>
+                <li>Top placement in the directory</li>
+                <li>Two additional email blasts per year</li>
+                <li>Sponsorship opportunities at chamber events</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <footer class="site-footer-main">
+        <div class="container footer-container-main">
+            <div class="footer-grid">
+                <div class="footer-contact">
+                    <h5 class="footer-heading">Rancagua Chamber of Commerce</h5>
+                    <p>German Riesco 358, Rancagua</p>
+                    <p class="footer-phone">Phone: <a href="tel:+2235552300">72 2 654 325</a></p>
+                </div>
+
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <i data-lucide="youtube" class="social-icon-svg"></i> </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <i data-lucide="twitter" class="social-icon-svg"></i> </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i data-lucide="linkedin" class="social-icon-svg"></i> </a>
+                </div>
+
+                <div class="footer-project-info">
+                    <p class="project-title">WDD231 Class Project</p>
+                    <p>Daniel Toledo</p>
+                    <p class="copyright">&copy; <span id="currentYear"></span> Rancagua Chamber of Commerce</p>
+                    <p>Last Modification: <span id="lastModified"></span></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Designed with care for the Rancagua community.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
