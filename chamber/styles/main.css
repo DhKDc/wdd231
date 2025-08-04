@@ -367,6 +367,18 @@ p {
     display: block;
 }
 
+.main-nav a.active,
+.mobile-nav a.active {
+    color: #B87333; 
+    text-decoration: underline; 
+    font-weight: 900; 
+}
+
+.dark .main-nav a.active,
+.dark .mobile-nav a.active {
+    color: #D48D6A;
+}
+
 @media (min-width: 768px) {
     .main-nav {
         display: flex;

@@ -68,4 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+
+    let currentPage = window.location.pathname.split('/').pop();
+    if (currentPage === '') {
+        currentPage = 'index.html';
+    }
+
+    const navLinks = document.querySelectorAll('.main-nav a, .mobile-nav a');
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+    });
 });
