@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const displayMembers = (members, viewType = 'grid') => {
         membersContainer.innerHTML = '';
-        membersContainer.className = viewType === 'grid' ? 'grid-view' : 'list-view'; // Set class for styling
+        membersContainer.className = 'members-container ' + (viewType === 'grid' ? 'grid-view' : 'list-view');
 
         members.forEach(member => {
             const card = document.createElement('div');

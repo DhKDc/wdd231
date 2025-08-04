@@ -4,20 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rancagua Chamber of Commerce Directory</title>
-    <meta name="description" content="Join the Rancagua Chamber of Commerce to grow your business, connect with local leaders, and discover opportunities in Rancagua." />
+    <title>Rancagua Chamber of Commerce - Discover</title>
+    <meta name="description"
+        content="Discover points of interest and attractions in Rancagua with the Rancagua Chamber of Commerce.">
     <meta name="author" content="Daniel Toledo Fuentes">
-    <meta property="og:title" content="Rancagua Chamber of Commerce Directory" />
-    <meta property="og:description" content="Join the Rancagua Chamber of Commerce to grow your business, connect with local leaders, and discover opportunities in Rancagua." />
-    <meta property="og:image" content="https://dhkdc.github.io/wdd231/chamber/directory/images/rancaguacoflogo.webp" />
-    <meta property="og:url" content="https://dhkdc.github.io/wdd231/chamber/" />
-    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rancagua Chamber of Commerce - Discover">
+    <meta property="og:description"
+        content="Discover points of interest and attractions in Rancagua with the Rancagua Chamber of Commerce.">
+    <meta property="og:image" content="https://dhkdc.github.io/wdd231/chamber/directory/images/rancaguacoflogo.webp">
+    <meta property="og:url" content="https://dhkdc.github.io/wdd231/chamber/discover.html">
+    <meta property="og:type" content="website">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/discover.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
@@ -39,7 +43,7 @@
             <div class="header-controls">
                 <button id="darkModeToggle" aria-label="Toggle Dark Mode" class="dark-mode-button">
                     <i data-lucide="moon" class="icon-moon"></i>
-                    <i data-lucide="sun" class="icon-sun" style="display: none;"></i>
+                    <i data-lucide="sun" class="icon-sun"></i>
                 </button>
                 <button id="mobileMenuButton" class="mobile-menu-trigger" aria-label="Open main menu"
                     aria-expanded="false">
@@ -58,13 +62,11 @@
     </header>
 
     <main class="container main-content">
-        <h1 class="section-title page-title-home">Member Directory</h1>
-        <div class="directory-controls">
-            <button id="gridViewButton" class="active" aria-label="Grid View">Grid</button>
-            <button id="listViewButton" aria-label="List View">List</button>
-        </div>
-        <div class="members-container grid-view">
-        </div>
+        <h1 class="section-title page-title-home">Discover Rancagua</h1>
+        <div id="visit-message-banner" class="visit-message-banner">
+            </div>
+        <div id="interest-cards-container" class="interest-cards-container">
+            </div>
     </main>
 
     <footer class="site-footer-main">
@@ -97,9 +99,8 @@
             </div>
         </div>
     </footer>
-
     <script src="scripts/main.js"></script>
-    <script src="scripts/directory.js"></script>
+    <script src="scripts/discover.js"></script>
 </body>
 
 </html>

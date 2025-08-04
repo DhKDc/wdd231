@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Plaza de Los Héroes",
+    "address": "Intersection of Estado St. and Independencia St., Rancagua, O'Higgins, Chile",
+    "description": "The central square of Rancagua, historically significant as the site of the Battle of Rancagua during the Chilean War of Independence. It features monuments and is a vibrant public space."
+  },
+  {
+    "name": "Estadio El Teniente",
+    "address": "Av. Bernardo O'Higgins 390, Rancagua, O'Higgins, Chile",
+    "description": "A prominent multi-purpose stadium primarily used for football matches, with a capacity of over 13,000 spectators. It's home to O'Higgins F.C. and has hosted international sporting events."
+  },
+  {
+    "name": "Parque Safari Chile",
+    "address": "Ruta H-30, Km. 5, Doñihue, O'Higgins, Chile (near Rancagua)",
+    "description": "An animal park and zoo offering unique safari experiences where visitors can interact with animals, along with other attractions like a zip line, arcade, and restaurant. It's a popular family destination."
+  },
+  {
+    "name": "Regional Museum of Rancagua",
+    "address": "Estado 687, Rancagua, O'Higgins, Chile",
+    "description": "Housed within two well-preserved colonial mansions, the museum showcases a collection of 19th-century furnishings, period costumes, and artifacts that provide insight into the local history and culture of the O'Higgins Region."
+  },
+  {
+    "name": "Medialuna de Rancagua",
+    "address": "Avenida Libertador Bernardo O'Higgins s/n, Rancagua, O'Higgins, Chile",
+    "description": "The most important 'medialuna' (half-moon shaped arena) in Chile, famous for hosting the annual National Rodeo Championship (Champion de Chile), a major cultural and sporting event celebrating Chilean huaso traditions."
+  },
+  {
+    "name": "Iglesia de la Merced",
+    "address": "Independencia 757, Rancagua, O'Higgins, Chile",
+    "description": "An 18th-century church with significant historical value, declared a National Monument. Its bell tower is particularly notable as it was where Bernardo O'Higgins awaited reinforcements during the Battle of Rancagua."
+  },
+  {
+    "name": "Sewell Mining Town (UNESCO World Heritage Site)",
+    "address": "Located in the Andes Mountains, northeast of Rancagua (access typically via guided tours from Rancagua or nearby towns)",
+    "description": "A former company town built by the Braden Copper Company in the early 20th century to house workers for the El Teniente copper mine. Its unique terraced, car-free urban design led to its designation as a UNESCO World Heritage Site. Tours offer a glimpse into its history."
+  },
+  {
+    "name": "Cachapoal Valley Wine Route",
+    "address": "Various wineries located throughout the Cachapoal Valley, O'Higgins Region, Chile (south of Rancagua)",
+    "description": "A renowned wine region known for its production of red wines, particularly Carmenere, Cabernet Sauvignon, and Merlot. The route comprises numerous vineyards offering tours, tastings, and a chance to experience Chilean viticulture."
+  }
+]
