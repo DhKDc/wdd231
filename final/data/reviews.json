@@ -1,0 +1,121 @@
+[
+  {
+    "isbn": "9780735211292",
+    "reviewer_name": "Alice Johnson",
+    "review_date": "2024-07-15",
+    "rating": 4.5,
+    "review_text": "A truly captivating story that kept me hooked from the very beginning. The character development was exceptional, and the world-building was immersive. I couldn't put it down and ended up reading it in just two days. Highly recommended for anyone who loves a good fantasy epic."
+  },
+  {
+    "isbn": "9780593334825",
+    "reviewer_name": "David Chen",
+    "review_date": "2024-07-10",
+    "rating": 5,
+    "review_text": "An absolute masterpiece. The author's prose is beautiful, and the themes explored are both timely and timeless. This book made me think, laugh, and cry. It's one of those rare books that will stay with you long after you've finished the last page. A must-read for everyone."
+  },
+  {
+    "isbn": "9781982137139",
+    "reviewer_name": "Maria Garcia",
+    "review_date": "2024-06-28",
+    "rating": 4,
+    "review_text": "A solid and enjoyable read. The plot was well-paced with plenty of twists and turns to keep things interesting. While I found the ending a little predictable, the journey to get there was thoroughly entertaining. A great choice for a weekend read."
+  },
+  {
+    "isbn": "9780061120084",
+    "reviewer_name": "Ben Carter",
+    "review_date": "2024-06-12",
+    "rating": 3.5,
+    "review_text": "An interesting concept, but the execution fell a bit flat for me. I enjoyed the first half of the book, but felt the pacing slowed down considerably in the second half. The characters were intriguing, but I wish they had been explored in more depth. It's a decent read, but not a new favorite."
+  },
+  {
+    "isbn": "9780143126560",
+    "reviewer_name": "Sophie Turner",
+    "review_date": "2024-08-02",
+    "rating": 4,
+    "review_text": "This was a fun and lighthearted read, perfect for a vacation. The characters were charming and the story was predictable in a comforting way. A great palate cleanser between heavier books."
+  },
+  {
+    "isbn": "9780525559474",
+    "reviewer_name": "Liam O'Connell",
+    "review_date": "2024-07-20",
+    "rating": 5,
+    "review_text": "I was completely blown away by this book. The historical detail was incredible, and the story was both epic and intimate. I learned so much while being thoroughly entertained. I can't recommend it enough."
+  },
+  {
+    "isbn": "9781524763138",
+    "reviewer_name": "Chloe Kim",
+    "review_date": "2024-07-18",
+    "rating": 2.5,
+    "review_text": "I wanted to like this one, but I just couldn't get into it. The main character made choices that I found frustrating, and the plot felt disjointed. It has its moments, but overall it wasn't for me."
+  },
+  {
+    "isbn": "9780316769488",
+    "reviewer_name": "Michael Brown",
+    "review_date": "2024-08-11",
+    "rating": 5,
+    "review_text": "A true classic for a reason. Salinger's voice for Holden Caulfield is iconic and unforgettable. It's a book that perfectly captures teenage angst and alienation. Reading it again after all these years was a profound experience."
+  },
+  {
+    "isbn": "9780143124177",
+    "reviewer_name": "Jessica Lee",
+    "review_date": "2024-08-09",
+    "rating": 4.5,
+    "review_text": "This book was beautifully written and incredibly moving. The way the story jumps between timelines is masterfully done. A haunting but ultimately hopeful story about the endurance of art and humanity."
+  },
+  {
+    "isbn": "9780385547345",
+    "reviewer_name": "Tom Harris",
+    "review_date": "2024-08-08",
+    "rating": 4,
+    "review_text": "What a wild ride! I thought I had it figured out at least three times, but I was wrong every time. The twist at the end was absolutely brilliant. A must-read for anyone who loves a good psychological thriller."
+  },
+  {
+    "isbn": "9781400079179",
+    "reviewer_name": "Laura Wilson",
+    "review_date": "2024-08-07",
+    "rating": 4,
+    "review_text": "A deeply moving and unforgettable story. The relationship between the father and son is so powerful and heartbreaking. It's a bleak book, but the love between the characters shines through. It will stick with me for a long time."
+  },
+  {
+    "isbn": "9780679783268",
+    "reviewer_name": "Daniel Martinez",
+    "review_date": "2024-08-06",
+    "rating": 5,
+    "review_text": "Absolutely stunning. Murakami's blend of the surreal and the mundane is on full display here. It's a complex, dreamlike novel that's part detective story, part metaphysical journey. I was completely captivated from start to finish."
+  },
+  {
+    "isbn": "9780743273565",
+    "reviewer_name": "Emily Rodriguez",
+    "review_date": "2024-08-05",
+    "rating": 4,
+    "review_text": "A fascinating and thought-provoking book about the power of habits. It's full of practical advice that I've already started applying to my own life. Highly recommend for anyone looking to make a positive change."
+  },
+  {
+    "isbn": "9780451524935",
+    "reviewer_name": "James Taylor",
+    "review_date": "2024-08-04",
+    "rating": 5,
+    "review_text": "Orwell was a visionary. This book is more relevant today than ever. It's a chilling and powerful warning about totalitarianism and surveillance. A masterpiece of dystopian fiction that everyone should read."
+  },
+  {
+    "isbn": "9781501173219",
+    "reviewer_name": "Olivia Green",
+    "review_date": "2024-08-03",
+    "rating": 4.5,
+    "review_text": "This book broke my heart and put it back together again. It's an emotional rollercoaster, but an important one. The author handles a very difficult topic with grace and sensitivity. A powerful story of strength and survival."
+  },
+  {
+    "isbn": "9780385549325",
+    "reviewer_name": "William Clark",
+    "review_date": "2024-08-01",
+    "rating": 3.5,
+    "review_text": "An interesting premise, but it didn't quite live up to the hype for me. The story was engaging enough, but I found the ending to be a bit unsatisfying. Still, it's a solid legal thriller that kept me guessing for the most part."
+  },
+  {
+    "isbn": "9780735211292",
+    "reviewer_name": "Ryan Patel",
+    "review_date": "2024-07-28",
+    "rating": 5,
+    "review_text": "This is going on my all-time favorites list. The prose is stunning and the story is just so incredibly creative. If you're looking for a book to get completely lost in, this is the one. A modern classic."
+  }
+]

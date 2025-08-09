@@ -3,25 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookmarked - A Local Reading Group</title>
-    <meta name="description" content="Welcome to Bookmarked, a local reading group for book lovers. Join us to discover new books, discuss your favorite reads, and connect with fellow readers.">
+    <title>Join Us! - Bookmarked</title>
+    <meta name="description" content="Join the Bookmarked reading group! Fill out our form to become a member.">
     <meta name="author" content="Your Name">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-website-url.com/">
-    <meta property="og:title" content="Bookmarked - A Local Reading Group">
-    <meta property="og:description" content="Welcome to Bookmarked, a local reading group for book lovers. Join us to discover new books, discuss your favorite reads, and connect with fellow readers.">
-    <meta property="og:image" content="https://your-website-url.com/images/bookmarked-logo.webp">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://your-website-url.com/">
-    <meta property="twitter:title" content="Bookmarked - A Local Reading Group">
-    <meta property="twitter:description" content="Welcome to Bookmarked, a local reading group for book lovers. Join us to discover new books, discuss your favorite reads, and connect with fellow readers.">
-    <meta property="twitter:image" content="https://your-website-url.com/images/bookmarked-logo.webp">
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/form.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -47,36 +35,54 @@
             <span></span>
         </button>
     </header>
+
     <main>
-        <section class="hero">
-            <div class="hero-text">
-                <h1>Discover Your Next Favorite Book With Us</h1>
-                <p>Bookmarked is a vibrant community of readers. We explore a diverse range of genres, from contemporary fiction to timeless classics. Join our discussions and share your passion for reading.</p>
-                <button id="learn-more-btn">Learn More</button>
-            </div>
-        </section>
-        <div class="reading-container">
-            <section class="currently-reading">
-                <h2>Currently Reading</h2>
-                <div class="book-details" id="currently-reading-book">
+        <div class="join-page-container">
+            <section class="join-us">
+                <h1>Join Our Reading Group</h1>
+                <p>We're excited to have you! Please fill out the form below to become a member of Bookmarked.</p>
+                <form action="form-action.html" method="get" class="join-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="favorite-genre">Favorite Book Genre</label>
+                        <select id="favorite-genre" name="favorite_genre">
+                            <option value="fiction">Fiction</option>
+                            <option value="non-fiction">Non-Fiction</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="sci-fi">Science Fiction</option>
+                            <option value="mystery">Mystery</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="subscribe" value="yes" checked>
+                            Subscribe to our monthly newsletter
+                        </label>
+                    </div>
+                    <button type="submit" class="button">Submit</button>
+                </form>
             </section>
-            <section class="next-meeting">
-                <h2>Next Meeting</h2>
-                <p>We'll be discussing our current read. Come prepared to share your thoughts!</p>
-                <p><strong>Date:</strong> <span id="next-meeting-date">TBA</span></p>
-                <p><strong>Location:</strong> Café Literario "Al Lado Del Museo"</p>
-                <a href="#">Add to Calendar</a>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.469288508924!2d-70.73816585559113!3d-34.17414059461743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9663433f7aaee0cd%3A0xf54323db741b24c4!2sCaf%C3%A9%20Literario%20%22Al%20Lado%20Del%20Museo%22!5e0!3m2!1ses-419!2scl!4v1754768845683!5m2!1ses-419!2scl" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <section class="membership-benefits">
+                <h2>Membership Benefits</h2>
+                <ul>
+                    <li>Engage in lively, moderated discussions each month.</li>
+                    <li>Discover new genres and authors curated by the group.</li>
+                    <li>Connect with a community of fellow book lovers in your area.</li>
+                    <li>Receive our monthly newsletter with reading suggestions and event reminders.</li>
+                    <li>Get exclusive access to author Q&A sessions and other special events.</li>
+                </ul>
             </section>
         </div>
-        <section class="bookshelf">
-            <h2>From Our Bookshelf</h2>
-            <div class="bookshelf-grid" id="bookshelf-grid">
-                </div>
-            <button id="load-more-btn" class="button" style="display: none; margin: 2rem auto;">Load More</button>
-        </section>
     </main>
+
     <footer>
         <div class="footer-logo">
              <img src="images/logo-icon.webp" alt="Bookmarked Icon" class="logo-icon">
@@ -99,15 +105,6 @@
         </div>
     </footer>
 
-        <script src="scripts/main.js" defer></script>
-    <script src="scripts/home.js" defer></script>
-
-    <div id="book-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">×</span>
-            <div id="modal-book-details">
-                </div>
-        </div>
-    </div>
+    <script src="scripts/main.js" defer></script>
 </body>
 </html>

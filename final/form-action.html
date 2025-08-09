@@ -3,25 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookmarked - A Local Reading Group</title>
-    <meta name="description" content="Welcome to Bookmarked, a local reading group for book lovers. Join us to discover new books, discuss your favorite reads, and connect with fellow readers.">
+    <title>Submission Received - Bookmarked</title>
+    <meta name="description" content="Thank you for joining the Bookmarked reading group!">
     <meta name="author" content="Your Name">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-website-url.com/">
-    <meta property="og:title" content="Bookmarked - A Local Reading Group">
-    <meta property="og:description" content="Welcome to Bookmarked, a local reading group for book lovers. Join us to discover new books, discuss your favorite reads, and connect with fellow readers.">
-    <meta property="og:image" content="https://your-website-url.com/images/bookmarked-logo.webp">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://your-website-url.com/">
-    <meta property="twitter:title" content="Bookmarked - A Local Reading Group">
-    <meta property="twitter:description" content="Welcome to Bookmarked, a local reading group for book lovers. Join us to discover new books, discuss your favorite reads, and connect with fellow readers.">
-    <meta property="twitter:image" content="https://your-website-url.com/images/bookmarked-logo.webp">
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/form.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -47,36 +35,17 @@
             <span></span>
         </button>
     </header>
+
     <main>
-        <section class="hero">
-            <div class="hero-text">
-                <h1>Discover Your Next Favorite Book With Us</h1>
-                <p>Bookmarked is a vibrant community of readers. We explore a diverse range of genres, from contemporary fiction to timeless classics. Join our discussions and share your passion for reading.</p>
-                <button id="learn-more-btn">Learn More</button>
-            </div>
-        </section>
-        <div class="reading-container">
-            <section class="currently-reading">
-                <h2>Currently Reading</h2>
-                <div class="book-details" id="currently-reading-book">
-                    </div>
-            </section>
-            <section class="next-meeting">
-                <h2>Next Meeting</h2>
-                <p>We'll be discussing our current read. Come prepared to share your thoughts!</p>
-                <p><strong>Date:</strong> <span id="next-meeting-date">TBA</span></p>
-                <p><strong>Location:</strong> Café Literario "Al Lado Del Museo"</p>
-                <a href="#">Add to Calendar</a>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.469288508924!2d-70.73816585559113!3d-34.17414059461743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9663433f7aaee0cd%3A0xf54323db741b24c4!2sCaf%C3%A9%20Literario%20%22Al%20Lado%20Del%20Museo%22!5e0!3m2!1ses-419!2scl!4v1754768845683!5m2!1ses-419!2scl" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </section>
-        </div>
-        <section class="bookshelf">
-            <h2>From Our Bookshelf</h2>
-            <div class="bookshelf-grid" id="bookshelf-grid">
+        <section class="form-submission">
+            <h1>Thank You!</h1>
+            <p>Your submission has been received. Here's the information you provided:</p>
+            <div id="submission-data" class="submission-data">
                 </div>
-            <button id="load-more-btn" class="button" style="display: none; margin: 2rem auto;">Load More</button>
+            <a href="index.html" class="button">Back to Home</a>
         </section>
     </main>
+
     <footer>
         <div class="footer-logo">
              <img src="images/logo-icon.webp" alt="Bookmarked Icon" class="logo-icon">
@@ -99,15 +68,7 @@
         </div>
     </footer>
 
-        <script src="scripts/main.js" defer></script>
-    <script src="scripts/home.js" defer></script>
-
-    <div id="book-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">×</span>
-            <div id="modal-book-details">
-                </div>
-        </div>
-    </div>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/form-action.js" defer></script>
 </body>
 </html>
