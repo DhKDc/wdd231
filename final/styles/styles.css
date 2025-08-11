@@ -1,22 +1,22 @@
-/* --- GLOBAL STYLES & VARIABLES --- */
+
 :root {
-    --md-primary: #52637A; /* Slate Blue */
+    --md-primary: #52637A;
     --md-on-primary: #FFFFFF;
-    --md-secondary: #B98D75; /* Terracotta Accent */
-    --md-surface: #E9EDF0; /* Light mode background */
-    --md-on-surface: #1A1C1E; /* Dark text for readability */
-    --md-on-surface-variant: #43474E; /* For borders and secondary text */
-    --md-surface-container: #FDF8F3; /* Soft, warm off-white for content cards */
+    --md-secondary: #B98D75;
+    --md-surface: #E9EDF0;
+    --md-on-surface: #1A1C1E;
+    --md-on-surface-variant: #43474E;
+    --md-surface-container: #FDF8F3;
     --text-color: var(--md-on-surface);
     --bg-color: var(--md-surface);
     --container-bg-color: var(--md-surface-container);
     --border-color: var(--md-on-surface-variant);
-    --link-color: #005A9C; /* NEW - Accessible link color for light mode */
-    --link-visited-color: #5A3A73; /* NEW - Accessible visited link color for light mode */
+    --link-color: #005A9C;
+    --link-visited-color: #5A3A73;
 }
 
 body[data-theme="dark"] {
-    --md-surface: #1A1C1E; /* Dark mode background */
+    --md-surface: #1A1C1E;
     --md-on-surface: #F8F9FC;
     --md-on-surface-variant: #9DA3AE;
     --md-surface-container: #2C2F33;
@@ -24,8 +24,8 @@ body[data-theme="dark"] {
     --bg-color: var(--md-surface);
     --container-bg-color: var(--md-surface-container);
     --border-color: var(--md-on-surface-variant);
-    --link-color: #99CCFF; /* NEW - Accessible link color for dark mode */
-    --link-visited-color: #C5A8E0; /* NEW - Accessible visited link color for dark mode */
+    --link-color: #99CCFF;
+    --link-visited-color: #C5A8E0;
 }
 
 *, *::before, *::after {
@@ -51,7 +51,7 @@ h2 {
     border-bottom: 1px solid var(--border-color); 
 }
 
-/* --- GENERAL LINK STYLING --- */
+
 a {
     color: var(--link-color);
     text-decoration: underline;
@@ -68,7 +68,7 @@ a:hover {
 }
 
 
-/* --- HEADER & NAVIGATION --- */
+
 header {
     max-width: 1200px;
     margin: 0 auto;
@@ -140,7 +140,7 @@ nav {
     transition: background-color 0.3s;
 }
 
-/* Resetting default link styles for navigation */
+
 nav a, .footer-links a {
     color: var(--text-color);
     text-decoration: none;
@@ -174,7 +174,7 @@ body[data-theme="dark"] #theme-switcher .moon { display: block; }
 body[data-theme="dark"] #theme-switcher .sun { display: none; }
 
 
-/* --- FOOTER --- */
+
 footer {
     max-width: 1200px;
     margin: 4rem auto 0;
@@ -238,7 +238,7 @@ footer {
     text-decoration: none;
 }
 
-/* --- RESPONSIVE BREAKPOINTS --- */
+
 @media (min-width: 768px) {
     footer { 
         flex-direction: row; 

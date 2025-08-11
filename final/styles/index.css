@@ -1,4 +1,4 @@
-/* --- MAIN CONTENT & LAYOUT (HOME PAGE) --- */
+
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -69,7 +69,7 @@ main {
     grid-template-columns: 1fr;
     gap: 2rem;
     margin-bottom: 4rem;
-    align-items: stretch; /* UPDATED from 'start' */
+    align-items: stretch;
 }
 
 .currently-reading, .next-meeting {
@@ -97,7 +97,7 @@ main {
     margin-top: 1rem;
 }
 
-/* --- BOOKSHELF & MODAL --- */
+
 .bookshelf {
     text-align: center;
 }
@@ -172,7 +172,7 @@ main {
 
 #modal-book-details {
     display: flex;
-    flex-direction: column; /* Default for mobile */
+    flex-direction: column;
     align-items: center;
     gap: 1.5rem;
 }
@@ -185,7 +185,7 @@ main {
 }
 
 .modal-text {
-    text-align: center; /* Default for mobile */
+    text-align: center;
 }
 
 .modal-text h2 {
@@ -223,7 +223,7 @@ main {
     to { opacity: 1; }
 }
 
-/* --- RESPONSIVE BREAKPOINTS (HOME PAGE) --- */
+
 @media (min-width: 768px) {
     .hero { flex-direction: row; text-align: left; }
     .reading-container { grid-template-columns: 65fr 35fr; }
@@ -231,7 +231,7 @@ main {
     .book-details img { max-width: 250px; }
     .bookshelf-grid { grid-template-columns: repeat(4, 1fr); }
 
-    /* Apply side-by-side layout for modal on larger screens */
+   
     #modal-book-details {
         flex-direction: row;
         align-items: flex-start;

@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Page Elements
     const staffGrid = document.getElementById('staff-posts-grid');
     const reviewsGrid = document.getElementById('reviews-grid');
     const searchInput = document.getElementById('review-search-input');
@@ -10,22 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadMorePostsBtn = document.getElementById('load-more-posts');
     const loadMoreReviewsBtn = document.getElementById('load-more-reviews');
 
-    // Data Sources & Constants
     const staffPostsUrl = 'data/staff-posts.json';
     const memberReviewsUrl = 'data/reviews.json';
     const POSTS_INITIAL_LOAD = 2;
     const REVIEWS_INITIAL_LOAD = 4;
     
-    // Global Data Stores
     let allStaffPosts = [];
     let allReviewsData = [];
     let allBooksData = {};
 
     if (!staffGrid || !reviewsGrid) return;
 
-    /**
-     * Shuffles an array in place using the Fisher-Yates algorithm.
-     */
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -33,9 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    /**
-     * Main data loading function
-     */
     async function loadAllBlogData() {
         try {
             const [staffResponse, reviewsResponse] = await Promise.all([
@@ -73,9 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    /**
-     * Renders staff posts, respects the initial load limit.
-     */
     function displayStaffPosts(posts) {
         staffGrid.innerHTML = '';
         posts.forEach((post, index) => {
@@ -110,9 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    /**
-     * Renders member review cards, respects limits unless filtering.
-     */
     function displayReviews(reviews, isFiltering = false) {
         reviewsGrid.innerHTML = '';
         if (reviews.length === 0) {
@@ -127,7 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const card = document.createElement('div');
             card.className = 'review-card';
-            // Only apply the 'hidden' class if we are NOT filtering
             if (!isFiltering && index >= REVIEWS_INITIAL_LOAD) {
                 card.classList.add('hidden');
             }
@@ -150,7 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
             reviewsGrid.appendChild(card);
         });
 
-        // Hide 'Load More' button if we are filtering, or if there's nothing more to load
         if (isFiltering || reviews.length <= REVIEWS_INITIAL_LOAD) {
             loadMoreReviewsBtn.style.display = 'none';
         } else {
@@ -158,9 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    /**
-     * MODAL: Finds post by its unique ID and shows it.
-     */
     function showPostModal(isbn, title) {
         const post = allStaffPosts.find(p => p.isbn === isbn && p.post_title === title);
         if (!post) return;
@@ -184,16 +164,12 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = 'block';
     }
 
-    /**
-     * SEARCH: Handles the live search and suggestion dropdown
-     */
     function handleSearchInput() {
         const searchTerm = searchInput.value.toLowerCase().trim();
         
         if (searchTerm.length < 2) {
             suggestionsContainer.style.display = 'none';
             if (searchTerm.length === 0) {
-                // When search is cleared, display the original limited list
                 displayReviews(allReviewsData, false);
             }
             return;
@@ -207,9 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
         showSuggestions(matchingReviews);
     }
 
-    /**
-     * SEARCH: Shows the suggestions dropdown
-     */
     function showSuggestions(reviews) {
         if (reviews.length === 0) {
             suggestionsContainer.style.display = 'none';
@@ -233,16 +206,12 @@ _            });
         suggestionsContainer.style.display = 'block';
     }
 
-    /**
-     * SEARCH: Filters the main grid based on a selected title
-     */
     function filterReviewsByTitle(title) {
         const lowerCaseTitle = title.toLowerCase();
         const reviewsToDisplay = allReviewsData.filter(review => {
             const bookData = allBooksData[`ISBN:${review.isbn}`];
             return bookData && bookData.title.toLowerCase() === lowerCaseTitle;
         });
-        // Display all results of the filter, and mark it as a filtering action
         displayReviews(reviewsToDisplay, true);
     }
     
@@ -264,7 +233,6 @@ _            });
         return starsHTML;
     }
     
-    // --- Event Listeners ---
     closeModalBtn.addEventListener('click', () => modal.style.display = 'none');
     window.addEventListener('click', (event) => {
         if (event.target == modal) {

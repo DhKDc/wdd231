@@ -1,28 +1,14 @@
-/**
- * home.js
- *
- * This script handles all the dynamic functionality for the home page (index.html).
- * It fetches book data from a local JSON file and the Open Library API to populate
- * the "Currently Reading" and "Bookshelf" sections.
- */
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Elements specific to the home page
     const currentlyReadingContainer = document.getElementById('currently-reading-book');
     const bookshelfGrid = document.getElementById('bookshelf-grid');
     const loadMoreBtn = document.getElementById('load-more-btn');
     const localDataUrl = 'data/bookinfo.json';
-    const booksPerPage = 10; // 2 rows of 5 on desktop
+    const booksPerPage = 10;
 
-    // Guard clause: If the required elements for this page aren't present, stop execution.
     if (!currentlyReadingContainer || !bookshelfGrid) {
         return; 
     }
-
-    /**
-     * Main function to orchestrate fetching local data first,
-     * then using that data to fetch from the external Open Library API.
-     */
     async function loadBookData() {
         try {
             const response = await fetch(localDataUrl);
@@ -44,10 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    /**
-     * Fetches and displays the single "Currently Reading" book.
-     * @param {string} isbn - The ISBN of the book to display.
-     */
     async function displayCurrentlyReading(isbn) {
         const url = `https://openlibrary.org/api/books?bibkeys=ISBN:${isbn}&format=json&jscmd=data`;
         try {
@@ -75,10 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    /**
-     * Fetches and displays multiple books for the bookshelf grid.
-     * @param {string[]} isbns - An array of ISBNs for the bookshelf.
-     */
     async function displayBookshelf(isbns) {
         if (!isbns || isbns.length === 0) return;
         const bibkeys = isbns.map(isbn => `ISBN:${isbn}`).join(',');
@@ -88,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch(url);
             const data = await response.json();
             
-            bookshelfGrid.innerHTML = ''; // Clear placeholder content
+            bookshelfGrid.innerHTML = ''; 
             const bookKeys = Object.keys(data);
 
             bookKeys.forEach((key, index) => {
@@ -122,15 +100,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    /**
-     * Displays a modal with detailed information about a selected book.
-     * @param {object} bookData - The book data object from the Open Library API.
-     */
     function showBookModal(bookData) {
         const modal = document.getElementById('book-modal');
         const modalDetails = document.getElementById('modal-book-details');
         
-        // More robustly find the best available cover image
         const coverUrl = (bookData.cover && bookData.cover.large) 
                        ? bookData.cover.large 
                        : (bookData.cover && bookData.cover.medium) 
@@ -150,7 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         modal.style.display = 'block';
 
-        // Scope the close button query to the modal for robustness
         const closeBtn = modal.querySelector('.close-button');
         if (closeBtn) {
             closeBtn.onclick = () => {
@@ -165,6 +137,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Initial call to start the data loading process for the home page
     loadBookData();
 });
