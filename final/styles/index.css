@@ -95,6 +95,8 @@ main {
 .next-meeting iframe {
     border-radius: 8px;
     margin-top: 1rem;
+    border: 0;
+    width: 100%;
 }
 
 
@@ -192,9 +194,21 @@ main {
     margin-top: 0;
 }
 
-.modal-text .button, #load-more-btn {
+.modal-text .button {
     display: inline-block;
     margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--md-primary);
+    color: var(--md-on-primary);
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+#load-more-btn {
+    display: none;
+    margin: 2rem auto;
     padding: 0.75rem 1.5rem;
     background-color: var(--md-primary);
     color: var(--md-on-primary);
