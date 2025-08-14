@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    
+export function initializeMain() {
     const hamburgerMenu = document.getElementById('hamburger-menu');
     const navMenu = document.querySelector('header nav');
 
@@ -49,4 +48,4 @@ document.addEventListener('DOMContentLoaded', () => {
             setTheme(newTheme);
         });
     }
-});
+}

@@ -1,25 +1,25 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const staffGrid = document.getElementById('staff-posts-grid');
-    const reviewsGrid = document.getElementById('reviews-grid');
-    const searchInput = document.getElementById('review-search-input');
-    const suggestionsContainer = document.getElementById('search-suggestions');
-    const modal = document.getElementById('staff-post-modal');
-    const modalContent = document.getElementById('modal-post-content');
-    const closeModalBtn = modal.querySelector('.close-button');
-    const loadMorePostsBtn = document.getElementById('load-more-posts');
-    const loadMoreReviewsBtn = document.getElementById('load-more-reviews');
+import { initializeMain } from './main.js';
 
-    const staffPostsUrl = 'data/staff-posts.json';
-    const memberReviewsUrl = 'data/reviews.json';
-    const POSTS_INITIAL_LOAD = 2;
-    const REVIEWS_INITIAL_LOAD = 4;
-    
-    let allStaffPosts = [];
-    let allReviewsData = [];
-    let allBooksData = {};
+const staffGrid = document.getElementById('staff-posts-grid');
+const reviewsGrid = document.getElementById('reviews-grid');
+const searchInput = document.getElementById('review-search-input');
+const suggestionsContainer = document.getElementById('search-suggestions');
+const modal = document.getElementById('staff-post-modal');
+const modalContent = document.getElementById('modal-post-content');
+const closeModalBtn = modal.querySelector('.close-button');
+const loadMorePostsBtn = document.getElementById('load-more-posts');
+const loadMoreReviewsBtn = document.getElementById('load-more-reviews');
 
-    if (!staffGrid || !reviewsGrid) return;
+const staffPostsUrl = 'data/staff-posts.json';
+const memberReviewsUrl = 'data/reviews.json';
+const POSTS_INITIAL_LOAD = 2;
+const REVIEWS_INITIAL_LOAD = 4;
 
+let allStaffPosts = [];
+let allReviewsData = [];
+let allBooksData = {};
+
+if (staffGrid && reviewsGrid) {
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 searchInput.value = title;
                 suggestionsContainer.style.display = 'none';
                 filterReviewsByTitle(title);
-_            });
+            });
             suggestionsContainer.appendChild(item);
         });
         suggestionsContainer.style.display = 'block';
@@ -257,4 +257,5 @@ _            });
     });
 
     loadAllBlogData();
-});
+    initializeMain();
+}

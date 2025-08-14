@@ -1,6 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const submissionDataContainer = document.getElementById('submission-data');
+import { initializeMain } from './main.js';
 
+const submissionDataContainer = document.getElementById('submission-data');
+if (submissionDataContainer) {
     const params = new URLSearchParams(window.location.search);
 
     let html = '<ul>';
@@ -11,4 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     html += '</ul>';
 
     submissionDataContainer.innerHTML = html;
-});
+}
+
+initializeMain();

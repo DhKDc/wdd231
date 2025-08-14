@@ -1,14 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
-    
-    const currentlyReadingContainer = document.getElementById('currently-reading-book');
-    const bookshelfGrid = document.getElementById('bookshelf-grid');
-    const loadMoreBtn = document.getElementById('load-more-btn');
-    const localDataUrl = 'data/bookinfo.json';
-    const booksPerPage = 10;
+import { initializeMain } from './main.js';
 
-    if (!currentlyReadingContainer || !bookshelfGrid) {
-        return; 
-    }
+const currentlyReadingContainer = document.getElementById('currently-reading-book');
+const bookshelfGrid = document.getElementById('bookshelf-grid');
+const loadMoreBtn = document.getElementById('load-more-btn');
+const localDataUrl = 'data/bookinfo.json';
+const booksPerPage = 10;
+
+if (currentlyReadingContainer && bookshelfGrid) {
     async function loadBookData() {
         try {
             const response = await fetch(localDataUrl);
@@ -138,4 +136,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     loadBookData();
-});
+    initializeMain();
+}
